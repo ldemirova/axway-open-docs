@@ -50,6 +50,10 @@ Amplify Central mesh governance enables you to govern and manage your APIs, publ
 
 Mesh governance includes the following enhancements:
 
+* Amplify CLI updates (version 0.10 and later) now provision the CLI resources needed for Istio agent Kubernetes discovery and promotion to a selected Environment in Amplify Central.
+* The alpha Istio Discovery Agent installation changes are documented here: [Deploy your agents with Amplify CLI](/docs/central/mesh_management/deploy-your-agents-with-the-amplify-cli/index.html)
+* The alpha Istio Discovery Agent usage and configuration changes to associate target promotion **Environment** with a **K8SCluster** and with a new **Mesh** scoped resource are added. They are documented here: [Discover APIs and services](/docs/central/mesh_management/discover-apis-and-services/index.html)
+
 ## Fixed issues
 
 The following issues were fixed in this version of Amplify Central:
