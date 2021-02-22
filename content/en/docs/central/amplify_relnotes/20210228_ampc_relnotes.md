@@ -21,7 +21,7 @@ The CLI extension is compatible **only** with the Amplify CLI **version 1.4** (<
 
 The Amplify Central CLI includes the following enhancements:
 
-* Download the Azure agents from public artifactory. 
+* Download the Azure agents from public artifactory.
 
 ### Amplify Central WebUI
 
@@ -40,8 +40,7 @@ The agents include the following enhancements:
 * Azure traceability agent report subscription usage
 * Azure traceability agent report APIs usage for only discovered APIs
 * Azure agent are not publicly available.
-* Agents to
-
+* New Gateways connectivity for try it: Apigee (https://github.com/Axway/agents-mulesofthttps://gi (https://github.com/Axway/agents-wso2)thub.com/Axway/agents-apigee), Kong (https://github.com/Axway/agents-kong), Mulesoft (https://github.com/Axway/agents-mulesoft) and WSO2 (https://github.com/Axway/agents-wso2).
 
 ### Mesh governance
 
