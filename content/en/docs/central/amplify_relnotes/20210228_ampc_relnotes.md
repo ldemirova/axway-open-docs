@@ -29,7 +29,9 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 
 The Amplify Central WebUI includes the following enhancements:  
 
-* Move to static IP address.
+* Amplify Central web UI can now be accessed using static IP address:
+    * apicentral.axway.com (US region): 3.94.245.118 / 54.208.199.251 / 3.212.78.217 / 52.202.95.208 / 107.23.176.64 / 3.225.16.120.
+    * central.eu-fr.axway.com	(EU region): 52.47.84.198 / 13.36.25.69	/ 35.181.21.87 / 13.36.2.143 / 13.36.52.216 / 15.236.7.112.
 
 ### Axway Edge Gateway / AWS / Azure Agents
 
@@ -52,7 +54,7 @@ Mesh governance includes the following enhancements:
 
 The following issues were fixed in this version of Amplify Central:
 
-* **Consumer is unable to consume v7 discovered APIs from Amplify Central web UI**. Previously, V7 discovery agent created application without cors enabled. Nous the discovery agent creates the application with '*' in javascript origin which allow the API to be consumed from any location.
+* **Consumer is unable to consume v7 discovered APIs from Amplify Central web UI**. Previously, V7 discovery agent created application without cors enabled. Now the discovery agent creates the application with '*' in javascript origin which allow the API to be consumed from any location.
 * **V7 traceability agent Linux service mode broken**. Proviously, the traceability service mode was broken. Now, the service mode has been restored and the traceability agent service can be installed, started and stopped
 * **Fixed IP addresses**. Previously, to access Amplify platform or Central, IP addresses were dynamic. Now, static IP addresses have been assigned to help setting up the firewall rules. More information can be found [here](/docs/central/connect-api-manager/network-traffic-apimanager/index.html#communication-ports)
 
