@@ -37,10 +37,10 @@ To provide better visibility into your mutli-type gateway eco system, two sets o
 
 The agents include the following enhancements:
 
-* Azure traceability agent report subscription usage
-* Azure traceability agent report APIs usage for only discovered APIs
-* Azure agent are not publicly available.
-* New Gateways connectivity for try it: Apigee (<https://github.com/Axway/agents-apigee>), Kong (<https://github.com/Axway/agents-kong>), Mulesoft (<https://github.com/Axway/agents-mulesoft>) and WSO2 (<https://github.com/Axway/agents-wso2>).
+* Azure traceability agent report subscription usage (Refer to API OBserver / App usage).
+* Azure traceability agent report APIs usage for only discovered APIs.
+* Azure agent are publicly available.
+* New try it Gateways connectivity: Apigee (<https://github.com/Axway/agents-apigee>), Kong (<https://github.com/Axway/agents-kong>), Mulesoft (<https://github.com/Axway/agents-mulesoft>) and WSO2 (<https://github.com/Axway/agents-wso2>).
 
 ### Mesh governance
 
@@ -52,9 +52,9 @@ Mesh governance includes the following enhancements:
 
 The following issues were fixed in this version of Amplify Central:
 
-* **Consumer is unable to consume APIs from Amplify Central web UI**. Previously, V7 discovery agent created application without cors enabled. Nous the discovery agent creates the application with '*' in javascript origin which allow the API to be consumed from any location.
+* **Consumer is unable to consume v7 discovered APIs from Amplify Central web UI**. Previously, V7 discovery agent created application without cors enabled. Nous the discovery agent creates the application with '*' in javascript origin which allow the API to be consumed from any location.
 * **V7 traceability agent Linux service mode broken**. Proviously, the traceability service mode was broken. Now, the service mode has been restored and the traceability agent service can be installed, started and stopped
-* **Fixed IP addresses**. Previously, to access Amplify platform or Central, IP addresses were dynamic. Now, static IP addresses have been assigned to help setting up the firewall rules. More information can be found [here](/docs/central/connect-api-manager/network-traffic-apimanager/index.html)
+* **Fixed IP addresses**. Previously, to access Amplify platform or Central, IP addresses were dynamic. Now, static IP addresses have been assigned to help setting up the firewall rules. More information can be found [here](/docs/central/connect-api-manager/network-traffic-apimanager/index.html#communication-ports)
 
 ## Known limitations
 
