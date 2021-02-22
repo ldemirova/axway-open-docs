@@ -13,13 +13,15 @@ The following new features and enhancements are available in this update.
 
 The Amplify Central CLI is a package for managing Amplify Central resources with a DevOps approach to API Management.
 
-Amplify Central CLI version 0.7.0 is now available on NPM (<https://www.npmjs.com/package/@axway/amplify-central-cli/v/0.7.0>)
+Amplify Central CLI version 0.11.0 is now available on NPM (<https://www.npmjs.com/package/@axway/amplify-central-cli/v/0.11.0>)
 
 The CLI extension is compatible **only** with the Amplify CLI **version 1.4** (<https://www.npmjs.com/package/@axway/amplify-cli/v/1.4.0>)
 
 **This is not yet compatible with the Axway CLI**.
 
-The Amplify Central CLI includes the following enhancements:  
+The Amplify Central CLI includes the following enhancements:
+
+* Download the Azure agents from public artifactory. 
 
 ### Amplify Central WebUI
 
@@ -27,11 +29,19 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 
 The Amplify Central WebUI includes the following enhancements:  
 
+* Move to static IP address.
+
 ### Axway Edge Gateway / AWS / Azure Agents
 
 To provide better visibility into your mutli-type gateway eco system, two sets of agents are provided. These agents collect data from the Gateway (API / traffic) and exposes it in Amplify Central, providing you with a global vision of your eco system from a single interface.
 
 The agents include the following enhancements:
+
+* Azure traceability agent report subscription usage
+* Azure traceability agent report APIs usage for only discovered APIs
+* Azure agent are not publicly available.
+* Agents to
+
 
 ### Mesh governance
 
@@ -42,6 +52,10 @@ Mesh governance includes the following enhancements:
 ## Fixed issues
 
 The following issues were fixed in this version of Amplify Central:
+
+* **Consumer is unable to consume APIs from Amplify Central web UI**. Previously, V7 discovery agent created application without cors enabled. Nous the discovery agent creates the application with '*' in javascript origin which allow the API to be consumed from any location.
+* **V7 traceability agent Linux service mode broken**. Proviously, the traceability service mode was broken. Now, the service mode has been restored and the traceability agent service can be installed, started and stopped
+* **Fixed IP addresses**. Previously, to access Amplify platform or Central, IP addresses were dynamic. Now, static IP addresses have been assigned to help setting up the firewall rules. More information can be found [here](/docs/central/connect-api-manager/network-traffic-apimanager/index.html)
 
 ## Known limitations
 
@@ -66,7 +80,6 @@ This version of Amplify Central has the following limitations:
 * Azure agents:
 
     * Discovery Agent is not managing revision and version yet.
-    * Traceability agent is not reporting the App usage traffic.
 
 * Mesh governance alpha Discovery Agents:
 
