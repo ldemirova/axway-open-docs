@@ -31,7 +31,7 @@ The Amplify Central WebUI includes the following enhancements:
 
 * Amplify Central web UI can now be accessed using static IP address:
     * apicentral.axway.com (US region): 3.94.245.118 / 54.208.199.251 / 3.212.78.217 / 52.202.95.208 / 107.23.176.64 / 3.225.16.120.
-    * central.eu-fr.axway.com (EU region): 52.47.84.198 / 13.36.25.69	/ 35.181.21.87 / 13.36.2.143 / 13.36.52.216 / 15.236.7.112.
+    * central.eu-fr.axway.com (EU region): 52.47.84.198 / 13.36.25.69 / 35.181.21.87 / 13.36.2.143 / 13.36.52.216 / 15.236.7.112.
 
 ### Axway Edge Gateway / AWS / Azure Agents
 
