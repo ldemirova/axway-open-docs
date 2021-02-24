@@ -210,7 +210,7 @@ User sessions that remain active for extended periods of time are exposed to att
 
 Since the session is destroyed after the specified period of time, the potential footprint of the session is eliminated, which helps to minimize attacks.
 
-## Intercom support
+## Chat support
 API Portal now allows you to connect to Intercom. Once you have an account and receive your application id you can configure it in **Extensions > Modules > Intercom**.
 
 By default the Intercom module is enabled and the only thing you need to do is to add your app id. Also you can choose whether you want to show the Intercom only to signed-in users or to all users.
