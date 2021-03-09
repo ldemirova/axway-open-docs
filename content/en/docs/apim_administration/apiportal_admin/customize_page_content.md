@@ -211,11 +211,13 @@ Since the session is destroyed after the specified period of time, the potential
 
 ## Chat support
 
-API Portal now allows you to connect to Intercom. Once you have an account and receive your application id you can configure it in **Extensions > Modules > Intercom**.
+Intercom chat support is enabled by default in API Portal. To start using it, configure its module with your `app_id` as follows:
 
-By default the Intercom module is enabled and the only thing you need to do is to add your app id. Also you can choose whether you want to show the Intercom only to signed-in users or to all users.
+1. In JAI, click **Extensions > Modules > Intercom**.
+2. Enter your `app_id`.
+3. Click to choose whether you want to show the Intercom only to signed users or to all users.
 
-Once you set the app id the Intercom will be displayed on all pages of API Portal.
+After you configure this module, the Intercom chat icon is displayed on all pages of API Portal.
 
 ## Show notifications for applications that are waiting for approval
 
@@ -228,4 +230,3 @@ To disabled the notification:
 1. In JAI, click **Components > API Portal > Additional settings**.
 2. Choose **No** for the **Show notifications for applications that are pending approval** field.
 3. Click **Save**.
-
