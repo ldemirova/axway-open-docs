@@ -179,12 +179,28 @@ The following options allow to add claims to support OpenID Connect.
 
 ### Advanced (JWS/JWT)
 
-This tab allows you to configure the following settings:
+You can configure the following settings in this tab:
 
 * **Critical extensions (crit)**: Set of values to add to the `crit` header.
 * **Extend JWS Header using a Policy**: Select a policy that when called, the contents of its invocation are added to the JWS Header.
 * **Alternate JWT Audiences**: Allows to set the JWT `aud` value to be an array of case-sensitive strings, each string containing a StringOrURI value.
 * **Extend JWT Payload using a Policy**: Select a policy that when called, the contents of its invocation are added to the JWT Payload.
+
+### Output
+
+From the **Output** tab you can configure how the filter returns a JWS object. You can configure the following options:
+
+* **Set an attribute with the generated signature**: Takes an **Attribute Name** as a parameter. When the filter completes, the JWS object will be accessible in that attribute through the use of a selector.
+* **Add the generated signature to an HTTP Header**: Sets the JWS as an HTTP header on the current circuit Message. You must enter the header name, and select one of the following options:
+    * **Overwrite existing value**: Select this option if the header already exists. If this option is disabled, the header will be appended creating multiple headers of the same name.
+    * **Use body headers**: The header is stored with the body, `${content.body}`.
+    * **Use message headers**: The header is stored in a distinct headers message attribute, `${http.headers}`.
+* **Detach signature with unencoded payload**: Detaching the payload will create a JWS token in the format `<header>..<signature>`. This payload is stored in a separate message attribute to be returned to the user, typically in the `content.body`. This option is used when signing a JSON response, and it supports the OBIE Open Banking message signing specification.
+
+For more information on JWS Detached Content, see [Appendix F of RFC 7515](https://tools.ietf.org/html/rfc7515#appendix-F). This payload is unencoded, and the JWS header contains a header specifying `b64=false` as described in [RFC 7797 Unencoded Payload Option](https://tools.ietf.org/html/rfc7797).
+
+{{< alert title="Note" color="primary" >}}
+The message attribute names for **Generated signature** and **Detach signature payload** must be distinct from one another. Using the same attribute name will result in a validation error in Policy Studio. {{< /alert >}}
 
 ## JWT Verify filter
 
@@ -260,6 +276,11 @@ The runtime validation works as follows:
 * Fail with `reason: unknown header`, if any of the claims present is the JWT token do not match the lists you have configured.
 * Fail with `reason: unknown header`, if the JWT token has a crit header list specified and you did not configured any list for your JWT verify filter.
 * Fail with `reason: crit header cannot be empty`, if the JWT token has an empty “crit” header list.
+
+**Claims**: You can select a policy that allows you to validate a claim. If a JWT Header claim policy is defined, the validation of the claim works as follows:
+
+* Successful: The policy will be invoked and displayed in the policy execution path, in [Traffic monitor](/docs/apim_reference/monitor_traffic_events_metrics/).
+* Fail: The failure path from the JWT Verify filter is executed.
 
 ### Additional JWT verification steps
 
