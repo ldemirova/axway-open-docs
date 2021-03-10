@@ -6,6 +6,7 @@ date: 2019-07-30T00:00:00.000Z
 description: Customize other features of your API Portal, such as sign up,
   login, and application settings.
 ---
+
 ## Add reCaptcha to sign up
 
 You can customize your sign up functionality by enabling reCaptcha
