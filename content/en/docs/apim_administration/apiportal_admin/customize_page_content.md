@@ -211,13 +211,15 @@ Since the session is destroyed after the specified period of time, the potential
 
 ## Chat support
 
-Intercom chat support is enabled by default in API Portal. To start using it, configure its module with your `app_id` as follows:
+You can configure your API Portal to show an Intercom chat support. After you enable this module, by default, all users will be able to see the Chat, even users not logged to the portal.
+
+To start using Intercom Chat:
 
 1. In JAI, click **Extensions > Modules > Intercom**.
 2. Enter your `Application Id` taken from Intercom.
-3. If you don't want to show the Intercom to non-logged in users toggle the options on `Show chat for non-logged in users` field and choose `No`. By the default all users will see it.
+3. To enable the chat only for logged users, select `No` from `Show chat for non-logged in users`.
 
-After you configure this module, the Intercom chat icon is displayed on all pages of API Portal.
+After you configure this module, the Intercom chat icon is displayed on all pages of your API Portal.
 
 ## Show notifications for applications that are waiting for approval
 
